@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Filipino Army | Official Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#0a0f08;color:#fff;overflow-x:hidden}
+header{background:rgba(20,32,14,0.95);backdrop-filter:blur(10px);padding:14px 22px;display:flex;align-items:center;gap:14px;border-bottom:2px solid #c9a227;position:sticky;top:0;z-index:20}
+header h2{margin:0;font-size:20px;letter-spacing:1px}
+header span{color:#c9a227}
+#menuBtn{background:#c9a227;border:none;padding:9px 15px;font-size:20px;font-weight:900;cursor:pointer;border-radius:8px;color:#000}
+#sidebar{position:fixed;left:-300px;top:0;width:285px;height:100%;background:#111d0e;padding-top:70px;transition:left .4s cubic-bezier(.2,.9,.3,1);z-index:100;border-right:2px solid #c9a227}
+#sidebar.open{left:0}
+#sidebar a{display:block;padding:14px 18px;color:#fff;text-decoration:none;margin:8px 12px;background:#1e2e18;border:1px solid #2a3d1f;border-radius:10px;font-weight:700;transition:.2s}
+#sidebar a:hover{background:#c9a227;color:#000;transform:translateX(6px)}
+#overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:50}
+#overlay.show{display:block}
+.page{display:none;opacity:0;transform:translateY(18px);transition:opacity .45s ease,transform .45s ease}
+.page.active{display:block;opacity:1;transform:translateY(0)}
+.hero{padding:85px 20px 70px;text-align:center;background:radial-gradient(circle at 50% 20%,#2e4a1a 0%,#14200d 60%,#0a0f08 100%);border-bottom:2px solid #c9a227}
+.hero small{letter-spacing:4px;color:#c9a227;font-weight:800;font-size:12px}
+.hero h1{font-size:52px;margin:10px 0;line-height:0.95;letter-spacing:-1px}
+.hero h1 span{color:#c9a227}
+.hero p{color:#d6d6d6;max-width:600px;margin:14px auto}
+.btn{background:#c9a227;color:#000;border:none;padding:14px 26px;font-weight:900;cursor:pointer;border-radius:30px;font-size:14px;transition:.2s;box-shadow:0 8px 20px rgba(201,162,39,.35)}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.btn2{background:transparent;color:#fff;border:2px solid #fff;padding:12px 24px;font-weight:800;cursor:pointer;border-radius:30px}
+.section{padding:36px 20px;max-width:980px;margin:auto}
+.section h2{color:#c9a227;font-size:26px;margin-bottom:6px}
+.sub{color:#aaa;margin-top:0;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#1a2913,#121e0c);border:1px solid #2f4a1f;border-radius:16px;padding:20px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:#c9a227;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.card b{font-size:17px}
+.card p{color:#cfd8c5;font-size:14px;line-height:1.6}
+.icon{font-size:32px;margin-bottom:10px}
+.box{background:#161f11;border:1px solid #2a3d1f;border-left:4px solid #c9a227;padding:16px;margin:12px 0;border-radius:10px;transition:.2s}
+.box:hover{transform:translateX(6px)}
+table{width:100%;border-collapse:collapse;background:#121e0c;border-radius:12px;overflow:hidden}
+th,td{padding:12px;text-align:left;border-bottom:1px solid #2a3d1f}
+th{background:#c9a227;color:#000}
+input,select,textarea{width:100%;padding:13px;margin:8px 0;background:#141f0f;color:#fff;border:1px solid #2f4a1f;border-radius:10px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#c9a227}
+footer{background:#111d0e;text-align:center;padding:20px;margin-top:30px;font-size:13px;color:#aaa;border-top:2px solid #c9a227}
+.badge{display:inline-block;background:#c9a227;color:#000;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:900}
+</style>
+</head>
+<body>
 
+<div id="sidebar">
+<a onclick="closeMenu()" style="text-align:right;background:none;border:none">✕ CLOSE</a>
+<a onclick="openPage('home')">🏠 Home</a>
+<a onclick="openPage('about')">🇵🇭 About</a>
+<a onclick="openPage('divisions')">🎖️ Divisions</a>
+<a onclick="openPage('ranks')">⭐ Ranks</a>
+<a onclick="openPage('rules')">📜 Rules</a>
+<a onclick="openPage('join')">📝 Join</a>
+</div>
+<div id="overlay" onclick="closeMenu()"></div>
+
+<header><button id="menuBtn" onclick="openMenu()">☰</button><h2>THE FILIPINO <span>ARMY</span></h2><span class="badge" style="margin-left:auto">ROBLOX RP</span></header>
+
+<div id="home" class="page active">
+<div class="hero">
+<small>OFFICIAL WEBSITE • EST. 2025</small>
+<h1>THE FILIPINO<br><span>ARMY</span></h1>
+<p>A disciplined Roblox military roleplay community. Training soldiers, protecting bases, and serving with honor.</p>
+<br>
+<a href="https://www.roblox.com/communities/11641165/The-Filipino-Army" target="_blank"><button class="btn">JOIN ON ROBLOX →</button></a>
+<button class="btn2" onclick="openPage('join')">ENLIST NOW</button>
+</div>
+<div class="section">
+<h2>Why Join Us?</h2><p class="sub">Built for players who want real structure, not just chaos.</p>
+<div class="grid">
+<div class="card"><div class="icon">🪖</div><b>Real Structure</b><p>Clear ranks, chain of command, and divisions with real duties.</p></div>
+<div class="card"><div class="icon">🎯</div><b>Active Trainings</b><p>Regular drills, patrols, inspections, and operations.</p></div>
+<div class="card"><div class="icon">🤝</div><b>Strong Community</b><p>Filipino and international players working as one unit.</p></div>
+</div>
+</div>
+</div>
+
+<div id="about" class="page">
+<div class="section">
+<h2>About The Filipino Army</h2><p class="sub">Who we are and what we do.</p>
+<p>The Filipino Army is a Roblox military roleplay community based on the Philippine Army. We conduct trainings, patrols, ceremonies, operations, and base defense roleplays.</p>
+<div class="grid">
+<div class="card"><b>Group</b><p>The Filipino Army - 11641165</p></div>
+<div class="card"><b>Base</b><p>Camp Aguinaldo / Fort Bonifacio</p></div>
+<div class="card"><b>Language</b><p>English and Tagalog</p></div>
+</div>
+<br>
+<a href="https://www.roblox.com/communities/11641165/The-Filipino-Army" target="_blank"><button class="btn">VISIT ROBLOX GROUP</button></a>
+</div>
+</div>
+
+<div id="divisions" class="page">
+<div class="section">
+<h2>Divisions</h2><p class="sub">Choose your path. Each division has its own mission.</p>
+<div class="box"><b>🛡️ ASG - Aguinaldo Security Group</b><p>Base security, gate security, VIP protection, and patrol of Camp Aguinaldo.</p></div>
+<div class="box"><b>🩺 Army Medical Corps</b><p>Medics and field treatment.</p></div>
+<div class="box"><b>🚨 Military Police Brigade</b><p>Discipline and security inside the base.</p></div>
+<div class="box"><b>⚡ Special Operations Command</b><p>Special missions and combat operations.</p></div>
+<div class="box"><b>🕵️ Military Intelligence Agency</b><p>Intel and reconnaissance.</p></div>
+<div class="box"><b>🎓 Officer Candidate School</b><p>Training for future officers.</p></div>
+<div class="box"><b>✈️ Aviation Army</b><p>Air support and helicopter transport.</p></div>
+</div>
+</div>
+
+<div id="ranks" class="page">
+<div class="section">
+<h2>Ranks</h2><p class="sub">Earn your rank through activity, discipline, and leadership.</p>
+<table>
+<tr><th>Rank</th><th>Category</th></tr>
+<tr><td>Recruit / Private</td><td>New Soldier</td></tr>
+<tr><td>Private First Class</td><td>Enlisted</td></tr>
+<tr><td>Corporal</td><td>Enlisted</td></tr>
+<tr><td>Sergeant</td><td>Non-Commissioned Officer</td></tr>
+<tr><td>Staff Sergeant</td><td>Non-Commissioned Officer</td></tr>
+<tr><td>Lieutenant</td><td>Junior Officer</td></tr>
+<tr><td>Captain</td><td>Officer</td></tr>
+<tr><td>Major</td><td>Senior Officer</td></tr>
+<tr><td>Colonel</td><td>Commander</td></tr>
+<tr><td>General</td><td>High Command</td></tr>
+</table>
+</div>
+</div>
+
+<div id="rules" class="page">
+<div class="section">
+<h2>Rules</h2><p class="sub">Discipline is what separates us.</p>
+<div class="box">1. Respect all ranks.</div>
+<div class="box">2. No RDM, VDM, FRP, or trolling.</div>
+<div class="box">3. Wear proper uniform on duty.</div>
+<div class="box">4. Follow chain of command.</div>
+<div class="box">5. No abuse of power or weapons.</div>
+<div class="box">6. Stay active. Inactive without LOA will be removed.</div>
+<div class="box">7. Loyalty to The Filipino Army.</div>
+</div>
+</div>
+
+<div id="join" class="page">
+<div class="section">
+<h2>Enlist Now</h2><p class="sub">Three steps to become a soldier.</p>
+<p>1. Join the Roblox Group &nbsp; 2. Fill up the form &nbsp; 3. Wait for an Officer</p>
+<br>
+<a href="https://www.roblox.com/communities/11641165/The-Filipino-Army" target="_blank"><button class="btn">JOIN GROUP FIRST →</button></a>
+<br><br>
+<input placeholder="Roblox Username">
+<input placeholder="Discord Username">
+<select>
+<option>Choose Division</option>
+<option>ASG - Aguinaldo Security Group</option>
+<option>Army Medical Corps</option>
+<option>Military Police Brigade</option>
+<option>Special Operations Command</option>
+<option>Military Intelligence Agency</option>
+<option>Officer Candidate School</option>
+<option>Aviation Army</option>
+</select>
+<textarea rows="4" placeholder="Why do you want to join?"></textarea>
+<button class="btn">SUBMIT APPLICATION</button>
+</div>
+</div>
+
+<footer>
+<p><b style="color:#fff">THE FILIPINO ARMY</b> | Roblox Roleplay Community</p>
+<p>Not affiliated with the real Armed Forces of the Philippines</p>
+<p>Group ID: 11641165</p>
+</footer>
+
+<script>
+function openMenu(){document.getElementById("sidebar").classList.add("open");document.getElementById("overlay").classList.add("show")}
+function closeMenu(){document.getElementById("sidebar").classList.remove("open");document.getElementById("overlay").classList.remove("show")}
+function openPage(id){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+closeMenu();
+window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
